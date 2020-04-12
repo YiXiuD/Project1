@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览</title>
+    <link href="css/browse.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <script type="application/javascript">
+        function search() {
+            alert("没看到吧其实我已经搜了！！");
+        }
+        function hotOnlick() {
+            alert("没错你点了！");
+        }
+        function screen() {
+            alert("好的我知道你点了！");
+        }
+    </script>
+    <script type="text/javascript">
+        //定义一个二维数组
+        var city=[
+            ["北京","上海","广州","深圳"],
+            ["华盛顿","纽约","旧金山","西雅图"],
+            ["剑桥","伦敦","苏格兰地区","北爱尔兰地区"],
+            ["罗马","米兰","威尼斯","都灵"]
+        ];
+        function getCity(){
+            var sltCountry=document.form1.country;   //获得国家下拉框的对象
+            var sltCity=document.form1.city;     //获得城市下拉框的对象
+            var country=city[sltCountry.selectedIndex-1];    //得到对应国家的城市数组
+            sltCity.length=1;    //清空城市下拉框，仅留提示选项。
+            //通过for循环，将城市中的值填充到城市下拉框中
+            for(var i=0;i<country.length;i++){
+                sltCity[i+1]=new Option(country[i],country[i]);
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <ul class="header">
+        <li class="left"><a href="home.html">首页</a></li>
+        <li class="left"><a href="browse.html" style="background-color: rgba(146,188,212,0.56);">浏览页</a></li>
+        <li class="left"><a href="search.html">搜索页</a></li>
+        <li style="float: right">
+            <div class="dropdown">
+                <button class="dropdownbtn">个人中心</button>
+                <div class="dropdown-content">
+                    <a href="upload.html"><img src="images/上传.png" /><p>上传</p></a>
+                    <a href="myPhoto.html"><img src="images/我的照片.png"/><p>我的照片</p></a>
+                    <a href="myCollection.html"><img src="images/我的收藏.png"/><p>我的收藏</p></a>
+                    <a href="index.html"><img src="images/登录.png"/><p>登录界面</p></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</header>
+<ul class="aside">
+    <li class="hotSech">
+        <input type="text" placeholder="资源搜索">
+        <input  type="button" onclick="search();" value="搜索">
+    </li>
+    <li class="hotExp">
+        <p> 热门国家</p>
+        <ul>
+            <li onclick="hotOnlick()">中国</li>
+            <li onclick="hotOnlick()">芬兰</li>
+            <li onclick="hotOnlick()">瑞典</li>
+            <li onclick="hotOnlick()">挪威</li>
+            <li onclick="hotOnlick()">冰岛</li>
+            <li onclick="hotOnlick()">丹麦</li>
+            <li onclick="hotOnlick()">希腊</li>
+            <li onclick="hotOnlick()">爱尔兰</li>
+        </ul>
+    </li>
+    <li class="hotExp">
+        <p> 热门城市</p>
+        <ul>
+            <li onclick="hotOnlick()">北京</li>
+            <li onclick="hotOnlick()">厦门</li>
+            <li onclick="hotOnlick()">上海</li>
+            <li onclick="hotOnlick()">三亚</li>
+            <li onclick="hotOnlick()">成都</li>
+            <li onclick="hotOnlick()">丽江</li>
+            <li onclick="hotOnlick()">神农架</li>
+            <li onclick="hotOnlick()">恩施</li>
+        </ul>
+    </li>
+    <li class="hotExp">
+        <p> 热门内容</p>
+        <ul>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+            <li onclick="hotOnlick()">content</li>
+        </ul>
+    </li>
+
+</ul>
+<div class="main">
+    <div class="selections">
+        <form name="form1">
+            <select name="country" onChange="getCity()" >
+                <option value="0">--国家--</option>
+                <option value="1">中国</option>
+                <option value="2">美国</option>
+                <option value="3">英国</option>
+                <option value="4">意大利</option>
+            </select>
+            <select name="city">
+                <option value="0">--城市--</option>
+            </select>
+            <select>
+            <option>--主题--</option>
+            <option>人物</option>
+            <option>自然</option>
+            <option>民俗</option>
+            <option>艺术</option>
+        </select>
+            <input type="button" class="screen" value="筛选" onclick="screen();">
+        </form>
+    </div>
+    <ul class="image">
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+        <li><a href="pictureDetail.html"><img src="images/s2.jpg" /></a></li>
+    </ul>
+    <p>首页<1,2,3,4,5,6,7,8,9...>末页</p>
+</div>
+<footer>
+    <p>2020.4|备案号：19302010051|作者：YiXiuD</p>
+    <p>如有疑问请联系作者：q1758324883</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="css/home.css" rel="stylesheet" type="text/css">
+    <script type="application/javascript">
+        function refresh()
+        {
+            alert("图片已刷新！");
+        }
+        function backTop() {
+            scrollTo(0, 0);
+        }
+    </script>
+</head>
+<body>
+<header>
+    <ul class="header">
+        <li class="left"><a href="home.html" style="background-color: rgba(146,188,212,0.56);">首页</a></li>
+        <li class="left"><a href="browse.html">浏览页</a></li>
+        <li class="left"><a href="search.html">搜索页</a></li>
+        <li style="float: right">
+            <div class="dropdown">
+                <button class="dropdownbtn">个人中心</button>
+                    <div class="dropdown-content">
+                        <a href="upload.html"><img src="images/上传.png" /><p>上传</p></a>
+                        <a href="myPhoto.html"><img src="images/我的照片.png"/><p>我的照片</p></a>
+                        <a href="myCollection.html"><img src="images/我的收藏.png"/><p>我的收藏</p></a>
+                        <a href="index.html"><img src="images/登录.png"/><p>登录界面</p></a>
+                    </div>
+            </div>
+    </li>
+    </ul>
+    <img src="images/headp.jpg" class="headp">
+</header>
+<ul class="image">
+    <li>
+        <div class="image">
+            <a href="pictureDetail.html"><img  src="images/s1.jpg"/></a>
+            <h5>TITLE</h5>
+            <p>船底座大星云位于船底座，是银河系中已知最大最亮的恒星之一。摄影师将多张照片叠加在一起，用PixInsight软件进行处理。</p>
+        </div>
+    </li>
+    <li>
+        <div class="image">
+            <a href="pictureDetail.html"><img  src="images/s1.jpg"/></a>
+            <h5>TITLE</h5>
+            <p>摄影师的父亲教他如何对焦望远镜、捕捉和处理数据。望远镜安装好之后，摄影师便开始了月球表面拍摄之旅，甚至希望比他的父亲过去拍摄的更入微。</p>
+        </div>
+    </li>
+    <li>
+        <div class="image">
+            <a href="pictureDetail.html"><img  src="images/s1.jpg"/></a>
+            <h5>TITLE</h5>
+            <p>在纳米比亚漆黑的夜空下，为捕捉到CrA Molecular Complex，摄影师足足花费了6个小时。有趣的是，在距离上存在着巨大差异：气尘复合体的距离不足500光年，球状星团的距离为3万光年。 </p>
+        </div>
+    </li>
+    <li>
+        <div class="image">
+            <a href="pictureDetail.html"><img  src="images/s1.jpg"/></a>
+            <h5>TITLE</h5>
+            <p>纳米比亚的漆黑夜空同样是捕捉神奇的女巫头星云和参宿七的绝佳地点。女巫头星云会发光，是因为星云内微细的尘埃，反射参宿七的星光所形成的。 </p>
+        </div>
+    </li>
+    <li>
+        <div class="image">
+            <a href="pictureDetail.html"><img  src="images/s1.jpg"/></a>
+            <h5>TITLE</h5>
+            <p>距半人马座约5900光年处有一个巨大而美丽的星云，被称为半人马λ星云。图片的中心是一组博克球状体，它们是黑暗密集的气体斑块，那里经常会有新的恒星诞生。1950年，南非天文学家谢克瑞（Thackeray）发现了这颗云球，现在被称为谢克瑞云球。 </p>
+        </div>
+    </li>
+    <li>
+        <div class="image">
+            <a href="pictureDetail.html"><img  src="images/s1.jpg"/></a>
+            <h5>TITLE</h5>
+            <p>2017年5月22日，丹麦的夏日夜空和合适的天气，使得摄影师得以捕捉到利姆海峡这一绚丽的橙色光芒。天气是如此的平静，以至于摄影师认为时间停留在此刻了。 </p>
+        </div>
+    </li>
+</ul>
+<div class="assist">
+    <img src="images/回顶.png" onclick="backTop()"/>
+    <img src="images/刷新.png" onclick="refresh();"/>
+</div>
+<footer>
+    <p>2020.4|备案号：19302010051|作者：YiXiuD</p>
+    <p>如有疑问请联系作者：q1758324883</p>
+</footer>
+</body>
+</html>

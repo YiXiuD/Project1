@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的照片</title>
+    <link href="css/pictureDetail.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <ul class="header">
+        <li class="left"><a href="home.html">首页</a></li>
+        <li class="left"><a href="browse.html">浏览页</a></li>
+        <li class="left"><a href="search.html">搜索页</a></li>
+        <li style="float: right">
+            <div class="dropdown">
+                <button class="dropdownbtn">个人中心</button>
+                <div class="dropdown-content">
+                    <a href="upload.html"><img src="images/上传.png" /><p>上传</p></a>
+                    <a href="myPhoto.html"><img src="images/我的照片.png"/><p>我的照片</p></a>
+                    <a href="myCollection.html"><img src="images/我的收藏.png"/><p>我的收藏</p></a>
+                    <a href="index.html"><img src="images/登录.png"/><p>登录界面</p></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</header>
+<h2>图片详情</h2>
+<div class="main">
+    <h3>TITLE</h3>
+    <table class="main">
+        <tr class="main">
+        <td class="main"><img src="images/n1.jpg"/></td>
+        <td><table class="detail">
+            <tr>
+                <td>作者</td>
+                <td>匿名</td>
+            </tr>
+            <tr>
+                <td>主题</td>
+                <td>风景</td>
+            </tr>
+            <tr>
+                <td>拍摄国家</td>
+                <td>中国</td>
+            </tr>
+            <tr>
+                <td>拍摄城市</td>
+                <td>上海</td>
+            </tr>
+            <tr>
+                <td>收藏人数</td>
+                <td>242</td>
+            </tr>
+        </table></td>
+        </tr>
+        <tr>
+            <td>
+                <p><strong>详情：</strong>2017年5月22日，丹麦的夏日夜空和合适的天气，使得摄影师得以捕捉到利姆海峡这一绚丽的橙色光芒。天气是如此的平静，以至于摄影师认为时间停留在此刻了。</p>
+            </td>
+            <td>
+                <input type="button" value="+收藏" onclick="alert('已收藏！')">
+            </td>
+        </tr>
+    </table>
+</div>
+<footer>
+    <p>2020.4|备案号：19302010051|作者：YiXiuD</p>
+    <p>如有疑问请联系作者：q1758324883</p>
+</footer>
+</body>
+</html>

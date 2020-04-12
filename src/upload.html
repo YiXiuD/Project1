@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的照片</title>
+    <link href="css/upload.css" rel="stylesheet" type="text/css">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function upload() {
+            alert('已上传！');
+            window.location.href = "myPhoto.html";
+        }
+    </script>
+</head>
+<body>
+<header>
+    <ul class="header">
+        <li class="left"><a href="home.html">首页</a></li>
+        <li class="left"><a href="browse.html">浏览页</a></li>
+        <li class="left"><a href="search.html">搜索页</a></li>
+        <li style="float: right">
+            <div class="dropdown">
+                <button class="dropdownbtn">个人中心</button>
+                <div class="dropdown-content">
+                    <a href="upload.html"><img src="images/上传.png" /><p>上传</p></a>
+                    <a href="myPhoto.html"><img src="images/我的照片.png"/><p>我的照片</p></a>
+                    <a href="myCollection.html"><img src="images/我的收藏.png"/><p>我的收藏</p></a>
+                    <a href="index.html"><img src="images/登录.png"/><p>登录界面</p></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</header>
+<h2>上传</h2>
+<div class="main">
+    <form action="#" method="get" onsubmit="return false">
+        <ul>
+            <li class="upImg">
+                <img  id="img" src="">
+                <a class="file" href="javascript:;">选择文件<input name="img" required type="file"></a>
+            </li>
+            <li><p>图片标题</p>
+                <input name="title" required>
+            </li>
+            <li><p>图片描述</p>
+                <input name="detail" required>
+            </li>
+            <li><p>拍摄国家</p>
+                <input name="country" required>
+            </li>
+            <li><p>拍摄城市</p>
+                <input name="city" required>
+            </li>
+        </ul>
+        <input class="submit" name="continue" onclick="upload();" type="submit" value="上传" >
+    </form>
+</div>
+<footer>
+    <p>2020.4|备案号：19302010051|作者：YiXiuD</p>
+    <p>如有疑问请联系作者：q1758324883</p>
+</footer>
+</body>
+</html>
+<script>
+    function preserve() {
+        var formData = new FormData();
+        var img = $("[name='img']").prop('files')[0];/*获取上传图片的信息*/
+        formData.append("img", img);
+        $.ajax({
+            type: "post",
+            url: "{:URL('admin/Banner/shopbanneradd')}",/*此处填写上传路径*/
+            processData: false,
+            contentType: false,
+            data: formData,
+            success: function (data) {
+
+            }
+        });
+    }
+</script>
+<!-- 上传图片并预览的js文件 start  无需改动-->
+<script type="text/javascript">
+    var small_img = document.querySelector('input[name=small_img]');
+    var img = document.querySelector('input[name=img]');
+    small_imgs = document.querySelector('#small_img');
+    imgs = document.querySelector('#img');
+    if (small_img) {
+        small_img.addEventListener('change', function () {
+            var file = this.files[0];
+            var reader = new FileReader();
+            // 监听reader对象的的onload事件，当图片加载完成时，把base64编码賦值给预览图片
+            reader.addEventListener("load", function () {
+                small_imgs.src = reader.result;
+            }, false);
+            // 调用reader.readAsDataURL()方法，把图片转成base64
+            reader.readAsDataURL(file);
+            $("img").eq(0).css("display", "block");
+        }, false);
+    }
+    if (img) {
+        img.addEventListener('change', function () {
+            var file = this.files[0];
+            var reader = new FileReader();
+            // 监听reader对象的的onload事件，当图片加载完成时，把base64编码賦值给预览图片
+            reader.addEventListener("load", function () {
+                imgs.src = reader.result;
+            }, false);
+            // 调用reader.readAsDataURL()方法，把图片转成base64
+            reader.readAsDataURL(file);
+            $("img").eq(1).css("display", "block");
+        }, false);
+    }
+</script>
+<!-- 上传图片并预览的js文件 end -->
