@@ -4,6 +4,8 @@
 
 Github：https://github.com/YiXiuD/Project1.git
 
+静态网址： https://yixiud.github.io/Project1/ 
+
 完成情况：九个页面基本完成，审美待定
 
 Bonus：裁剪没做，响应式布局有一部分，美不美观不知道
